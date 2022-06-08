@@ -28,7 +28,8 @@ import com.patronDto.app.entity.CustomerEntity;
 import com.patronDto.app.entity.PartidaEntity;
 import com.patronDto.app.provider.ICustomerProvider;
 
-@CrossOrigin(origins = "https://victor-pena-dam-tfg.web.app/")
+//@CrossOrigin(origins = "https://victor-pena-dam-tfg.web.app/")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
 public class CustomerController {
@@ -83,6 +84,7 @@ public class CustomerController {
 		customerDto.setFullName(customerEntity.getFirstName().concat(" ").concat(customerEntity.getLastName()));
 		customerDto.setId(customerEntity.getId());
 		customerDto.setEmail(customerEntity.getEmail());
+		if(partidaEntity!=null) {
 		customerDto.setNumeroMuertes(partidaEntity.getNumeroMuertes());
 		customerDto.setEnemigosFantasmaDerrotados(partidaEntity.getEnemigosFantasmaDerrotados());
 		customerDto.setEnemigosEsqueletosDerrotados(partidaEntity.getEnemigosEsqueletosDerrotados());
@@ -90,7 +92,7 @@ public class CustomerController {
 		customerDto.setBossFinalDerrotados(partidaEntity.getBossFinalDerrotados());
 		customerDto.setMonedasObtenidas(partidaEntity.getMonedasObtenidas());
 		customerDto.setNivelSecreto(partidaEntity.getNivelSecreto());
-		
+		}
 		return new ResponseEntity<CustomerDTO>(customerDto, HttpStatus.OK);
 	}
 	
