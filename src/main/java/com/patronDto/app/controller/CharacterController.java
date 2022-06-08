@@ -15,8 +15,8 @@ import com.patronDto.app.dto.CharacterDto;
 import com.patronDto.app.entity.CharacterEntity;
 import com.patronDto.app.provider.ICharacterProvider;
 
-//@CrossOrigin(origins = "https://victor-pena-dam-tfg.web.app/")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://victor-pena-dam-tfg.web.app/")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
 public class CharacterController {

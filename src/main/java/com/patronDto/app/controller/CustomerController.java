@@ -28,8 +28,8 @@ import com.patronDto.app.entity.CustomerEntity;
 import com.patronDto.app.entity.PartidaEntity;
 import com.patronDto.app.provider.ICustomerProvider;
 
-//@CrossOrigin(origins = "https://victor-pena-dam-tfg.web.app/")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://victor-pena-dam-tfg.web.app/")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
 public class CustomerController {
